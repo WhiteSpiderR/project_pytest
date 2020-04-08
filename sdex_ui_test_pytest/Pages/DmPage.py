@@ -10,10 +10,10 @@ class DmPage:
     Класс для работы со страницей Exchange
     """
 
-    input_amount_loc = 'sdex-input[formcontrolname="qty"] input'  # поле Amount
-    input_asset_loc = '.sdex-form-field-type-sdex-select [formcontrolname="asset"] ng-select'  # поле Asset
-    button_send_money_loc = 'sdex-card-form form button.sdex-button-border'  # кнопка Send money
-    button_set_verified_loc = 'button[color="info"]'
+    input_amount_loc = ''  # поле Amount
+    input_asset_loc = ''  # поле Asset
+    button_send_money_loc = ''  # кнопка Send money
+    button_set_verified_loc = ''
 
     def __init__(self, driver):
         self.driver = driver

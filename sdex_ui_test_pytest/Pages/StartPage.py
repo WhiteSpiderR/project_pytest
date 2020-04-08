@@ -13,6 +13,6 @@ class StartPage:
     @allure.step('Открываем сайт')
     def open_sdex_site(self):
         """
-        Открывает сайт бижи
+        Get to main page
         """
         self.driver.get(CommonConstants.SITE_HOST)

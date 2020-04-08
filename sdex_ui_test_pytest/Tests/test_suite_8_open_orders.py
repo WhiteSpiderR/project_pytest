@@ -25,7 +25,7 @@ class TestOpenOrders:
         self.resource = Resource(self.driver)
         self.default_keywords = DefaultKeywords(self.driver)
 
-    @allure.step('Авторизация на баржи')
+    @allure.step('')
     def setup_method(self):
         self.start_page.open_sdex_site()
         self.exchange_page.click_button_login()
@@ -34,7 +34,7 @@ class TestOpenOrders:
         self.default_keywords.check_authorization_page(
             exp_text=CommonConstants.EXPECTED_TEXT_OF_PAGE_AFTER_LOGIN_ACCOUNT_2)
 
-    @allure.issue('https://sdexnt.atlassian.net/browse/AUT-401', 'Test case to jira')
+    @allure.issue('')
     def test_buy_or_sell_on_exchange_page_with_check_on_open_order_page(self):
         """
         8.4 Покупка/продажа на бирже с проверкой на странице открытых ордеров и в блоке открытых ордеров на странице биржи

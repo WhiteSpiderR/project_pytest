@@ -9,19 +9,19 @@ class LoginPage:
     Класс для работы со страницей Exchange
     """
 
-    # Форма ввода email
-    input_email_loc = '[formcontrolname="email"] input'
-    # Форма ввода пароля
-    input_password_loc = '[formcontrolname="password"] input'
-    # Форма ввода кода авторизации, всплывающее окно для двухфакторной авторизации
-    input_2fa_code_loc = '[formcontrolname="code"] input'
-    # Кнопка отправки логина и пароля
-    button_submit_loc = 'div button.sdex-button-border'
+
+    input_email_loc = ''
+
+    input_password_loc = ''
+
+    input_2fa_code_loc = ''
+
+    button_submit_loc = ''
 
     def __init__(self, driver):
         self.driver = driver
 
-    @allure.step('Вводим email в поле авторизации')
+    @allure.step('')
     def input_email(self, email):
         """
         Вводим email в поле авторизации
@@ -31,7 +31,7 @@ class LoginPage:
         WebDriverWait(self.driver, 20).until(
             EC.visibility_of_element_located((By.CSS_SELECTOR, LoginPage.input_email_loc))).send_keys(email)
 
-    @allure.step('Вводим email в поле авторизации')
+    @allure.step('')
     def input_password(self, password):
         """
         Вводим email в поле авторизации
@@ -41,7 +41,7 @@ class LoginPage:
         WebDriverWait(self.driver, 20).until(
             EC.visibility_of_element_located((By.CSS_SELECTOR, LoginPage.input_password_loc))).send_keys(password)
 
-    @allure.step('кликает на кнопку submit')
+    @allure.step('')
     def click_button_login(self):
         """
         Кликает на кнопку submit
@@ -49,7 +49,7 @@ class LoginPage:
         WebDriverWait(self.driver, 20).until(
             EC.visibility_of_element_located((By.CSS_SELECTOR, LoginPage.button_submit_loc))).click()
 
-    @allure.step('Авторизация на сайте')
+    @allure.step('')
     def site_login(self, email, password, code_2fa=None):
         """
         Логинимся на сайте

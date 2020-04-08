@@ -28,7 +28,7 @@ class TestAuthorization:
     def setup_method(self):
         self.start_page.open_sdex_site()
 
-    @allure.issue('https://sdexnt.atlassian.net/browse/AUT-271')
+    @allure.issue('')
     def test_open_authorization_from_header_of_main_page(self):
         """
         2.1 Вызов формы авторизации из хэдера главной страницы
@@ -36,7 +36,7 @@ class TestAuthorization:
         self.exchange_page.click_button_login()
         self.resource.check_login_forms_inputs()
 
-    @allure.issue('hhttps://sdexnt.atlassian.net/browse/AUT-273')
+    @allure.issue('')
     def test_authorization_existing_user_verified_profile(self):
         """
         2.3 Авторизация с данными существующего пользователя (профиль верифицирован)
@@ -53,9 +53,9 @@ class TestAuthorization:
         """
         allure.attach(body=self.driver.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
 
-    # def teardown_class(self):
-    #     """
-    #     Закрыть драйвер
-    #     """
-    #     self.driver.quit()
+    def teardown_class(self):
+        """
+        Закрыть драйвер
+        """
+        self.driver.quit()
 

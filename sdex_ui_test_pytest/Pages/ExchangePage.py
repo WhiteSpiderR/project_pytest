@@ -12,7 +12,7 @@ class ExchangePage:
     def __init__(self, driver):
         self.driver = driver
 
-    button_login = 'sdex-header [href="/login"]'
+    button_login = ''
 
     @allure.step('Переходим на страницу для авторизации')
     def click_button_login(self):
